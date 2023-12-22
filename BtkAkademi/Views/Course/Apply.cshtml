@@ -1,0 +1,65 @@
+@model Candidate
+
+<div>
+    <h1 class="display-4">Başvuru Formu</h1>
+</div>
+
+<form method="post" asp-action="Apply">
+
+    <div class="form-group my-3">
+        <label asp-for="email">E-Posta</label>
+        <input asp-for="email" class="form-control"/>
+
+    </div>
+
+    <div class="form-group my-3">
+        <label asp-for="name">Ad</label>
+        <input asp-for="name" class="form-control"/>
+
+    </div>
+
+    <div class="form-group my-3">
+        <label asp-for="surname">Soyad</label>
+        <input asp-for="surname" class="form-control"/>
+
+    </div>
+
+    <div class="form-group my-3">
+        <label asp-for="age">Yaş</label>
+        <select asp-for="age" class="form-control">
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+
+        </select>
+    </div>
+
+    <div>
+        <h3 class="display-6">Kurs seçimi</h3>
+    </div>
+
+    <div>
+        <p>
+            <input type="radio" id="mvc" value="ASP.NET Core MVC" name="SelectedCourse">
+            <label>ASP.NET Core MVC</label>
+        </p>
+        <p>
+            <input type="radio" id="mvc" value="ASP.NET Core" name="SelectedCourse">
+            <label>ASP.NET Core</label>
+        </p>
+         <p>
+            <input type="radio" id="mvc" value="Blazor" name="SelectedCourse">
+            <label>Blazor</label>
+        </p>
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-primary">Gönder</button>
+        <a class="btn btn-warning" href="/">Anasayfa</a>
+    </div>
+
+</form>
