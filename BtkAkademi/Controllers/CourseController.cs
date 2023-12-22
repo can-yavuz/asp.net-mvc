@@ -6,7 +6,9 @@ namespace BtkAkademi.Controllers{
     {
         public IActionResult Index(){
 
-            return View();
+            var model = Repository.Applications;
+
+            return View(model);
         }
 
         public IActionResult Apply(){
@@ -17,8 +19,9 @@ namespace BtkAkademi.Controllers{
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Apply([FromForm]Candidate model){
-            
-            return View();
+
+            Repository.Add(model);
+            return View("Feedback",model);
         }
     }
 }
