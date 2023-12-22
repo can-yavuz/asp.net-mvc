@@ -44,22 +44,22 @@
 
     <div>
         <p>
-            <input type="radio" id="mvc" value="ASP.NET Core MVC" name="SelectedCourse">
+            <input type="radio" id="mvc" value="ASP.NET Core MVC" asp-for="selectedCourse">
             <label>ASP.NET Core MVC</label>
         </p>
         <p>
-            <input type="radio" id="mvc" value="ASP.NET Core" name="SelectedCourse">
+            <input type="radio" id="mvc" value="ASP.NET Core" asp-for="selectedCourse">
             <label>ASP.NET Core</label>
         </p>
          <p>
-            <input type="radio" id="mvc" value="Blazor" name="SelectedCourse">
+            <input type="radio" id="mvc" value="Blazor" asp-for="selectedCourse">
             <label>Blazor</label>
         </p>
     </div>
 
     <div>
         <button type="submit" class="btn btn-primary">Gönder</button>
-        <a class="btn btn-warning" href="/">Anasayfa</a>
+        <a class="btn btn-warning" asp-controller="Home" asp-action="Index">Anasayfa</a>
     </div>
 
 </form>
